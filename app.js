@@ -27,7 +27,7 @@ const deadline = document.querySelector('.deadline');
 const items = document.querySelectorAll('.deadline-format h4');
 
 let futureDate = new Date(2020, 7, 12, 10, 30, 0);
-console.log(futureDate);
+// console.log(futureDate);
 
 const year = futureDate.getFullYear();
 const hours = futureDate.getHours();
@@ -36,9 +36,12 @@ const min = futureDate.getMinutes();
 let month = futureDate.getMonth();
 month = months[month];
 
-let day = futureDate.getDay();
-day = weekdays[day];
+const day = weekdays[futureDate.getDay()];
 
 const date = futureDate.getDate();
 
 giveaway.textContent = `giveaway ends on ${day}, ${month} ${date}, ${year} ${hours}:${min}pm`;
+
+// future time in ms
+const futureTime = futureDate.getTime();
+console.log(futureTime);
