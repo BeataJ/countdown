@@ -25,3 +25,12 @@ const weekdays = [
 const giveaway = document.querySelector('.giveaway');
 const deadline = document.querySelector('.deadline');
 const items = document.querySelectorAll('.deadline-format h4');
+
+let futureDate = new Date(2020, 7, 12, 10, 30, 0);
+console.log(futureDate);
+
+const year = futureDate.getFullYear();
+const hours = futureDate.getHours();
+const min = futureDate.getMinutes();
+
+giveaway.textContent = `giveaway ends on ${year} ${hours}:${min}pm`;
