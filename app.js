@@ -26,7 +26,13 @@ const giveaway = document.querySelector('.giveaway');
 const deadline = document.querySelector('.deadline');
 const items = document.querySelectorAll('.deadline-format h4');
 
-let futureDate = new Date(2020, 7, 13, 10, 30, 0);
+let tempDate = new Date();
+let tempYear = tempDate.getFullYear();
+let tempMonth = tempDate.getMonth();
+let tempDay = tempDate.getDate();
+
+// let futureDate = new Date(2020, 7, 13, 10, 30, 0);
+const futureDate = new Date(tempYear, tempMonth, tempDay + 10, 11, 30, 0);
 // console.log(futureDate);
 
 const year = futureDate.getFullYear();
