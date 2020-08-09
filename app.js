@@ -64,7 +64,9 @@ function getRemainingTime() {
   let days = t / oneDay;
   days = Math.floor(days);
   let hours = Math.floor((t % oneDay) / oneHour);
-  console.log(hours);
+  let mins = Math.floor((t % oneHour) / oneMin);
+  let secs = Math.floor((t % oneMin) / 1000);
+  console.log(secs);
 }
 
 getRemainingTime();
