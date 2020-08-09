@@ -48,7 +48,7 @@ const futureTime = futureDate.getTime();
 function getRemainingTime() {
   const today = new Date().getTime();
   const t = futureTime - today;
-  console.log(`reman ${t}`);
+  // console.log(`reman ${t}`);
 
   // 1s = 1000ms
   // 1m = 60s
@@ -87,4 +87,6 @@ function getRemainingTime() {
   });
 }
 
+// countdown
+let countdown = setInterval(getRemainingTime, 1000);
 getRemainingTime();
