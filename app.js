@@ -66,7 +66,20 @@ function getRemainingTime() {
   let hours = Math.floor((t % oneDay) / oneHour);
   let mins = Math.floor((t % oneHour) / oneMin);
   let secs = Math.floor((t % oneMin) / 1000);
-  console.log(secs);
+
+  // set values array
+  const values = [days, hours, mins, secs];
+
+  function format(item) {
+    if (item < 10) {
+      return `0${item}`;
+    }
+    return item;
+  }
+
+  items.forEach((item, index) => {
+    item.innerHTML = format(values[index]);
+  });
 }
 
 getRemainingTime();
