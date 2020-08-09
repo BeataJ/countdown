@@ -70,11 +70,16 @@ function getRemainingTime() {
   // set values array
   const values = [days, hours, mins, secs];
 
+  // function format(item) {
+  //   if (item < 10) {
+  //     return `0${item}`;
+  //   }
+  //   return item;
+  // }
+
   function format(item) {
-    if (item < 10) {
-      return `0${item}`;
-    }
-    return item;
+    const result = item < 10 ? `0${item}` : item;
+    return result;
   }
 
   items.forEach((item, index) => {
