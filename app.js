@@ -49,17 +49,21 @@ function getRemainingTime() {
   const today = new Date().getTime();
   const t = futureTime - today;
   console.log(`reman ${t}`);
+
+  // 1s = 1000ms
+  // 1m = 60s
+  // 1hr = 60min
+  // 1d = 24hr
+
+  // value in ms
+  const oneDay = 24 * 60 * 60 * 1000;
+  const oneHour = 60 * 60 * 1000;
+  const oneMin = 60 * 1000;
+
+  // Calculate all values
+  let days = t / oneDay;
+  days = Math.floor(days);
+  console.log(days);
 }
-
-// 1s = 1000ms
-// 1m = 60s
-// 1hr = 60min
-// 1d = 24hr
-
-// value in ms
-const oneDay = 24 * 60 * 60 * 1000;
-const oneHour = 60 * 60 * 1000;
-const oneMin = 60 * 1000;
-console.log(`min ${oneMin}`);
 
 getRemainingTime();
